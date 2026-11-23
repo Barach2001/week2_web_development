@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A simple personal budget and expense tracker.">
+  <title>My Budget Tracker</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <div class="brand">
+      <img src="https://cdn.jsdelivr.net/npm/lucide-static@0.468.0/icons/wallet.svg" alt="Wallet logo" width="42">
+      <div>
+        <p class="eyebrow">PERSONAL FINANCE</p>
+        <h1>My Budget Tracker</h1>
+      </div>
+    </div>
+    <p class="header-note">Small steps. Smarter spending.</p>
+  </header>
+
+  <main class="container">
+    <section class="intro-card" aria-labelledby="welcome-heading">
+      <div>
+        <p class="eyebrow">YOUR MONEY, MADE CLEAR</p>
+        <h2 id="welcome-heading">Keep track of where your money goes.</h2>
+        <p>Record everyday expenses, organise them by category and review your spending.</p>
+      </div>
+      <div class="balance-art" aria-hidden="true">KSh</div>
+    </section>
+
+    <section class="add-expense-section panel" aria-labelledby="form-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">NEW TRANSACTION</p>
+          <h2 id="form-heading">Add an expense</h2>
+        </div>
+        <span class="section-icon" aria-hidden="true">＋</span>
+      </div>
+      <form id="expense-form">
+        <div class="form-grid">
+          <div class="form-field">
+            <label for="expense-name">Expense name</label>
+            <input type="text" id="expense-name" name="expense-name" placeholder="e.g. Lunch" required>
+          </div>
+          <div class="form-field">
+            <label for="expense-amount">Amount (KSh)</label>
+            <input type="number" id="expense-amount" name="expense-amount" placeholder="e.g. 250" min="0" step="0.01" required>
+          </div>
+          <div class="form-field">
+            <label for="expense-category">Category</label>
+            <select id="expense-category" name="expense-category" required>
+              <option value="">Choose a category</option>
+              <option value="Food">Food</option>
+              <option value="Transport">Transport</option>
+              <option value="Rent">Rent</option>
+              <option value="Entertainment">Entertainment</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+        </div>
+        <button type="button" id="add-expense-button">Add Expense</button>
+        <p class="form-note">This form is a static HTML example. The button will be connected with JavaScript in a later week.</p>
+      </form>
+    </section>
+
+    <section class="expenses-section panel" aria-labelledby="expenses-heading">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">RECENT ACTIVITY</p>
+          <h2 id="expenses-heading">Your expenses</h2>
+        </div>
+        <span class="sample-label">Sample data</span>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th scope="col">Name</th>
+              <th scope="col">Amount</th>
+              <th scope="col">Category</th>
+              <th scope="col">Date</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Groceries</td><td>KSh 1,200.00</td><td><span class="category food">Food</span></td><td>2026-11-18</td></tr>
+            <tr><td>Bus fare</td><td>KSh 180.00</td><td><span class="category transport">Transport</span></td><td>2026-11-18</td></tr>
+            <tr><td>Room rent</td><td>KSh 4,500.00</td><td><span class="category rent">Rent</span></td><td>2026-11-19</td></tr>
+            <tr><td>Football match</td><td>KSh 300.00</td><td><span class="category fun">Entertainment</span></td><td>2026-11-20</td></tr>
+            <tr><td>Mobile data</td><td>KSh 250.00</td><td><span class="category other">Other</span></td><td>2026-11-21</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="help-section panel">
+      <details>
+        <summary>How to use this tracker</summary>
+        <div class="details-content">
+          <ol>
+            <li>Enter a short name for the expense.</li>
+            <li>Enter the amount in Kenyan shillings.</li>
+            <li>Choose the category that best describes it.</li>
+            <li>Select <strong>Add Expense</strong>. JavaScript functionality will be added in a later project week.</li>
+            <li>Review the sample table to see how expenses are organised.</li>
+          </ol>
+        </div>
+      </details>
+    </section>
+
+    <section class="video-section panel" aria-labelledby="video-heading">
+      <p class="eyebrow">LEARN A MONEY SKILL</p>
+      <h2 id="video-heading">A quick budgeting lesson</h2>
+      <p>Watch a budgeting video and think about one spending habit you could improve.</p>
+      <div class="video-frame">
+        <iframe
+          src="https://www.youtube-nocookie.com/embed/sVKQn2I4HDM"
+          title="Budgeting tips video"
+          width="560"
+          height="315"
+          frameborder="0"
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+          referrerpolicy="strict-origin-when-cross-origin"
+          allowfullscreen>
+        </iframe>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>Built as a learning project · Personal Budget &amp; Expense Tracker</p>
+  </footer>
+</body>
+</html>
